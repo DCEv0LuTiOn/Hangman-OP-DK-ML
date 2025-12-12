@@ -11,10 +11,10 @@ def file_read():
         list_of_words = file_of_words.readlines()
 
     for i in range(0,len(list_of_words) -1):
-        list_of_words[i] = str.replace(list_of_words[i], "\n", "") 
+        list_of_words[i] = str.lower(str.replace(list_of_words[i], "\n", "")) 
     list_of_words = ["Apel"]
     return list_of_words
 
 
 liste_test = file_read()
-#print(f"{liste_test}")
+
