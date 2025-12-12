@@ -1,7 +1,9 @@
 '''
 Discibtion: This moduls represends the developments of the gui
 Creation Date: 11.12.2025
-Last Change: 12.12.2025 - wrote nächser_guess funktion, part of spieler_name
+Last Change: 12.12.2025 - added spieler_namen, erneutes_spielen
+Change User: DK
+Last Change: 12.12.2025 - written nächser_guess funktion, part of spieler_name
 Change User: DK
 Last Change: 12.12.2025 - added gui.py from old Repo
 Change User: DK
@@ -10,7 +12,12 @@ Change User: OP
 '''
 
 import os
+import re
 os.system("cls")
+
+spiel_neustarten = 1
+spiel_beenden = 2
+
 
 #Figur Stage 1 von 6
 def figur_stage_1():
@@ -107,19 +114,29 @@ def figur_stage_6():
 #Text Prints
 
 def spieler_namen():
-       spielende_spieler = []
-       spieler = input(f"Bitte geben Sie Ihren Namen an:")
-       spielende_spieler.append = spieler
-       
+       spieler = []
+       while True:
+                try:
+                     anzahl = int(input(f"Wie viele Spieler spielen mit? (2-5)"))
+                     if 2 <= anzahl <= 5:
+                            break
+                     else:
+                            print("Bitte ein Zahl zwischen 2 und 5 eingeben.")
+                except ValueError:
+                     print("Bitte geben Sie eine gültige Zahl ohne Komma an.")
+
+
+
 
 def geheimes_wort():
-       with open("woerter.txt", encoding="utf-8") as file_of_words:
-              pass
+       spieler_namen()
+       
+              
+              
               
 
 def nächster_guess():
         while True:
-                import re
                 guess = input(f"Bitte geben Sie den nächsten Buchstaben ein:")
                 if re.fullmatch(r"[A-Za-z]+", guess):
                         print("Ihr geratener Buchstabe / Wort lautet:",guess)
@@ -130,7 +147,8 @@ def nächster_guess():
                         
        
 def falscher_guess():
-
+       
+        
 
        print("Du hast falsch geraten.")
 
@@ -140,6 +158,19 @@ def gewonnen():
 def verloren():
        print("Du hast verloren \U0001F613\U0001F613\U0001F613")
 
+def erneutes_spielen():
+        while True:
+                auswahl = int(input(f"Was möchten Sie tun?\n1 um erneut zu Spielen\n2 um das Spiel zu beenden.\nAuswahl:"))
+                if auswahl == 1:
+                     print("Test")
+                else:
+                        print("Das Spiel wurde beendent")
+                        break
+                      
+        
+        
+ 
+       
 #Test
 #figur_stage_1()
 #print()
@@ -155,10 +186,14 @@ def verloren():
 #print()
 #geheimes_wort()
 #print()
-nächster_guess()
+#nächster_guess()
 #print()
 #falscher_guess()
 #print()
 #gewonnen()
 #print()
 #verloren()
+#print()
+#spieler_namen()
+#print()
+erneutes_spielen()
