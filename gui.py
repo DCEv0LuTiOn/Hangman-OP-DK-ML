@@ -158,14 +158,14 @@ def gewonnen():
 def verloren():
        print("Du hast verloren \U0001F613\U0001F613\U0001F613")
 
-def erneutes_spielen():
+def erneutes_spielen() -> bool:
         while True:
                 auswahl = int(input(f"Was möchten Sie tun?\n1 um erneut zu Spielen\n2 um das Spiel zu beenden.\nAuswahl:"))
                 if auswahl == 1:
-                     print("Test")
+                     return True
                 else:
                         print("Das Spiel wurde beendent")
-                        break
+                        return False
                       
         
         
