@@ -125,7 +125,7 @@ def spieler_namen():
                      if 2 <= anzahl <= 5:
                             pass
                      else:
-                            raise ValueError              
+                            raise               
                 except ValueError:
                      print("Bitte geben Sie einen Zahl zwischen 2-5 ein")
                 
@@ -133,29 +133,46 @@ def spieler_namen():
                 if anzahl == 2:
                         name_1 = input(f"Bitte geben Sie den Namen von Spieler 1 an:")
                         name_2 = input(f"Bitte geben Sie den Namen von Spieler 2 an:")
-                        spieler.append[name_1,name_2]
+
+                        spieler.append(name_1)
+                        spieler.append(name_2)
+
                 elif anzahl == 3:
                        name_1 = input(f"Bitte geben Sie den Namen von Spieler 1 an:")
                        name_2 = input(f"Bitte geben Sie den Namen von Spieler 2 an:")
                        name_3 = input(f"Bitte geben Sie den Namen von Spieler 3 an:")
-                       spieler.append[name_1,name_2,name_3]
+
+                       spieler.append(name_1)
+                       spieler.append(name_2)
+                       spieler.append(name_3)
+                       
                 elif anzahl == 4:
                        name_1 = input(f"Bitte geben Sie den Namen von Spieler 1 an:")
                        name_2 = input(f"Bitte geben Sie den Namen von Spieler 2 an:")
                        name_3 = input(f"Bitte geben Sie den Namen von Spieler 3 an:")
                        name_4 = input(f"Bitte geben Sie den Namen von Spieler 4 an:")
-                       spieler.append[name_1,name_2,name_3,name_4]
+
+                       spieler.append(name_1)
+                       spieler.append(name_2)
+                       spieler.append(name_3)
+                       spieler.append(name_4)
+
                 else:
                        name_1 = input(f"Bitte geben Sie den Namen von Spieler 1 an:")
                        name_2 = input(f"Bitte geben Sie den Namen von Spieler 1 an:")
                        name_3 = input(f"Bitte geben Sie den Namen von Spieler 1 an:")
                        name_4 = input(f"Bitte geben Sie den Namen von Spieler 1 an:")
                        name_5 = input(f"Bitte geben Sie den Namen von Spieler 1 an:")
-                       spieler.append[name_1,name_2,name_3,name_4,name_5]
-
+                       
+                       spieler.append(name_1)
+                       spieler.append(name_2)
+                       spieler.append(name_3)
+                       spieler.append(name_4)
+                       spieler.append(name_5)
+                       
                 return spieler     
            
-
+           
 def nächster_guess():
         while True:
                 guess = input(f"Bitte geben Sie den nächsten Buchstaben ein:")
