@@ -215,6 +215,6 @@ def verloren():
 #print()
 #verloren()
 #print()
-spieler_namen()
+#spieler_namen()
 #print()
 #erneutes_spielen()
