@@ -123,12 +123,12 @@ def spieler_namen():
                      print("Es können/müssen 2-5 Spieler spielen.")
                      anzahl = int(input(f"Wie viele Spieler spielen mit?:"))
                      if 2 <= anzahl <= 5:
-                            break
-                            
+                            pass
                      else:
-                            print("Bitte ein Zahl zwischen 2 und 5 eingeben.")
+                            raise ValueError              
                 except ValueError:
-                     print("Bitte geben Sie eine gültige Zahl ohne Komma an.")
+                     print("Bitte geben Sie einen Zahl zwischen 2-5 ein")
+                
 
                 if anzahl == 2:
                         name_1 = input(f"Bitte geben Sie den Namen von Spieler 1 an:")
