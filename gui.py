@@ -1,6 +1,8 @@
 '''
 Discibtion: This moduls represends the developments of the gui
 Creation Date: 11.12.2025
+Last Change: 16.12.2025 - def erneutes Spielen überarbeitet
+Change User: DK
 Last Change: 12.12.2025 - added spieler_namen, erneutes_spielen
 Change User: DK
 Last Change: 12.12.2025 - written nächser_guess funktion, part of spieler_name
@@ -160,7 +162,7 @@ def verloren():
 
 def erneutes_spielen() -> bool:
         while True:
-                auswahl = int(input(f"Was möchten Sie tun?\n1 um erneut zu Spielen\n2 um das Spiel zu beenden.\nAuswahl:"))
+                auswahl = int(input(f"Was möchten Sie tun?\n1 Um ein Spiel zu starten oder erneut zu Spielen\n2 um das Spiel zu beenden.\nAuswahl:"))
                 if auswahl == 1:
                      return True
                 else:
