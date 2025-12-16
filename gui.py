@@ -1,7 +1,7 @@
 '''
 Discibtion: This moduls represends the developments of the gui
 Creation Date: 11.12.2025
-Last Change: 16.12.2025 - def erneutes Spielen überarbeitet, spieler_namen bearbeitet
+Last Change: 16.12.2025 - def erneutes Spielen überarbeitet, spieler_namen, gelöscht: erneut_spielen, geheimes_wort
 Change User: DK
 Last Change: 12.12.2025 - added spieler_namen, erneutes_spielen
 Change User: DK
@@ -146,30 +146,7 @@ def spieler_namen():
                        name_4 = input(f"Bitte geben Sie den Namen von Spieler 1 an:")
                        name_5 = input(f"Bitte geben Sie den Namen von Spieler 1 an:")
                 return name_1,name_2,name_3,name_4,name_5
-
-
-
-def geheimes_wort():
-        wort_erzeugen()
-        gesucht = ""
-        x = 0
-        länge = len(wort)
-
-        while x < länge:
-                gesucht = gesucht + "_"
-                x = x+1
-
-        buchstabe = input(f"Eingabe:")
-
-        for eingabe in wort:
-                if eingabe == buchstabe:
-                        print(eingabe)
-                        gesucht[x] = buchstabe
-                        x=x+1
-    
-        print(gesucht)
-              
-              
+           
 
 def nächster_guess():
         while True:
@@ -194,6 +171,14 @@ def gewonnen():
 def verloren():
        print("Du hast verloren \U0001F613\U0001F613\U0001F613")
 
+#def erneutes_spielen() -> bool:
+        #while True:
+                #auswahl = int(input(f"Was möchten Sie tun?\n1 Um ein Spiel zu starten oder erneut zu Spielen\n2 um das Spiel zu beenden.\nAuswahl:"))
+                #if auswahl == 1:
+                     #return True
+                #else:
+                        #print("Das Spiel wurde beendent")
+                        #return False
                       
         
         
@@ -222,5 +207,6 @@ def verloren():
 #print()
 #verloren()
 #print()
-#spieler_namen()
+spieler_namen()
 #print()
+#erneutes_spielen()
