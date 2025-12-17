@@ -12,9 +12,9 @@ def file_read():
 
     for i in range(0,len(list_of_words) -1):
         list_of_words[i] = str.lower(str.replace(list_of_words[i], "\n", "")) 
-    list_of_words = ["Apel"]
+    #list_of_words = ["apel"]
     return list_of_words
 
 
-liste_test = file_read()
+#liste_test = file_read()
 
