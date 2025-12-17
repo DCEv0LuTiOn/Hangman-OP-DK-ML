@@ -145,7 +145,7 @@ def spieler_namen():
                      if 2 <= anzahl <= 5:
                             pass
                      else:
-                            raise ValueError              
+                            raise               
                 except ValueError:
                      print("Bitte geben Sie einen Zahl zwischen 2-5 ein")
                 
